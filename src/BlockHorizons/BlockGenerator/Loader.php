@@ -6,14 +6,17 @@ namespace BlockHorizons\BlockGenerator;
 use BlockHorizons\BlockGenerator\generators\BlockGenerator;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
+use pocketmine\utils\SingletonTrait;
 use pocketmine\world\generator\GeneratorManager;
 use pocketmine\world\WorldCreationOptions;
 
 class Loader extends PluginBase implements Listener
 {
+	use SingletonTrait;
 
 	public function onLoad(): void
 	{
+		self::setInstance($this);
 		@rmdir($this->getServer()->getFilePath() . "worlds/real_level");
 
 		GeneratorManager::getInstance()->addGenerator(BlockGenerator::class, "vanilla", fn() => null);
