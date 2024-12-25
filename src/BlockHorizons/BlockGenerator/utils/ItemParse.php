@@ -2,7 +2,7 @@
 
 namespace BlockHorizons\BlockGenerator\utils;
 
-use BlockHorizons\BlockGenerator\Main;
+use BlockHorizons\BlockGenerator\Loader as Main;
 use pocketmine\item\Item;
 use pocketmine\item\VanillaItems;
 use pocketmine\item\LegacyStringToItemParser;
