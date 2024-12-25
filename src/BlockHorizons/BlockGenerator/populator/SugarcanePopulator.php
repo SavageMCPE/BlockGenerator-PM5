@@ -46,7 +46,7 @@ class SugarcanePopulator extends SurfaceBlockPopulator
 			for ($j = $z - 4; $j < ($z + 4); $j++) {
 				if (!$i || !$j || $i > 15 || $j > 15) continue; // edge of chunk
 				$b = $world->getBlockAt($i, $y, $j)->getTypeId();
-				if ($b === BlockTypeIds::WATER || $b === BlockTypeIds::STILL_WATER) {
+				if ($b === BlockTypeIds::WATER) {
 					$count++;
 				}
 				if ($count > 10) {
