@@ -5,7 +5,7 @@ namespace BlockHorizons\BlockGenerator\populator;
 
 use BlockHorizons\BlockGenerator\biomes\CustomBiome;
 use BlockHorizons\BlockGenerator\biomes\type\CoveredBiome;
-use pocketmine\block\VanillaBlocks;
+use pocketmine\block\{Air, VanillaBlocks};
 use pocketmine\utils\Random;
 use pocketmine\world\ChunkManager;
 use pocketmine\world\format\Chunk;
@@ -36,7 +36,7 @@ class GroundCoverPopulator implements Populator
 
 				while (($y = $this->getNextStone($chunk, $x, $y, $z)) >= 0) {
 
-					if (($coverBlock = $biome->getCoverBlock($y))->getId() > 0) {
+					if (($coverBlock = $biome->getCoverBlock($y)) instaceof Air) {
 						$world->setBlockAt($realX, $y + 1, $realZ, $coverBlock);
 					}
 					$maxSurfaceDepth = max(min(
