@@ -36,7 +36,7 @@ class GroundCoverPopulator implements Populator
 
 				while (($y = $this->getNextStone($chunk, $x, $y, $z)) >= 0) {
 
-					if (($coverBlock = $biome->getCoverBlock($y)) instaceof Air) {
+					if (($coverBlock = $biome->getCoverBlock($y)) instanceof Air) {
 						$world->setBlockAt($realX, $y + 1, $realZ, $coverBlock);
 					}
 					$maxSurfaceDepth = max(min(
