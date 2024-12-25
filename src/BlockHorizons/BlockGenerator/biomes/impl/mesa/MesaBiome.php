@@ -9,7 +9,6 @@ use BlockHorizons\BlockGenerator\noise\SimplexF;
 use BlockHorizons\BlockGenerator\populator\CactusPopulator;
 use BlockHorizons\BlockGenerator\populator\DeadBushPopulator;
 use pocketmine\block\Block;
-use pocketmine\block\BlockFactory;
 use pocketmine\block\VanillaBlocks;
 use pocketmine\utils\Random;
 
