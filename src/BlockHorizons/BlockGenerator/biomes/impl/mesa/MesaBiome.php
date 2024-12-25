@@ -113,8 +113,8 @@ class MesaBiome extends CoveredBiome
 		} else {
 			$this->currMeta = $this->colorLayer[($y + $this->randY) & 0x3F];
 			return $this->currMeta === -1
-				? ItemParse::stringToItem('172:0')
-				: ItemParse::stringToItem('159:'.$this->currMeta);
+				? ItemParse::stringToItem('172:0')->getBlock()
+				: ItemParse::stringToItem('159:'.$this->currMeta)->getBlock();
 		}
 	}
 
