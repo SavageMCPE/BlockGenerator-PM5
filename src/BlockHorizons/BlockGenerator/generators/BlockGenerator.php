@@ -128,9 +128,9 @@ class BlockGenerator extends CustomGenerator
 
 	public function generateChunk(ChunkManager $world, int $chunkX, int $chunkZ): void
 	{
-		$baseX = (int) $chunkX * Chunk::EDGE_LENGTH;
-		$baseZ = (int) $chunkZ * Chunk::EDGE_LENGTH;
-		$this->random->setSeed((int) $chunkX * $this->localSeed1 ^ $chunkZ * $this->localSeed2 ^ $this->seed);
+		$baseX = $chunkX * Chunk::EDGE_LENGTH;
+		$baseZ = $chunkZ * Chunk::EDGE_LENGTH;
+		$this->random->setSeed(intval($chunkX * $this->localSeed1) ^ intval($chunkZ * $this->localSeed2) ^ $this->seed);
 
 		$chunk = $world->getChunk($chunkX, $chunkZ);
 
