@@ -25,7 +25,7 @@ class GroundCoverPopulator implements Populator
 			for ($z = 0; $z < 16; ++$z) {
 				$y = 254;
 
-				$biome = CustomBiome::getBiome($chunk->getBiomeId($x, $z));
+				$biome = CustomBiome::getBiome($chunk->getBiomeId($x, 0, $z));
 				$realX = $baseX + $x;
 				$realZ = $baseZ + $z;
 
