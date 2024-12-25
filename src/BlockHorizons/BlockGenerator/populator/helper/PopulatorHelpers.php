@@ -12,8 +12,6 @@ class PopulatorHelpers
 
 	const NON_SOLID = [
 		BlockTypeIds::AIR => true,
-		BlockTypeIds::LEAVES => true,
-		BlockTypeIds::LEAVES2 => true,
 		BlockTypeIds::SNOW_LAYER => false,
 		BlockTypeIds::TALL_GRASS => true,
 	];
