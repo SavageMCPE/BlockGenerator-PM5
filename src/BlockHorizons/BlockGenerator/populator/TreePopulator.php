@@ -6,7 +6,7 @@ namespace BlockHorizons\BlockGenerator\populator;
 use BlockHorizons\BlockGenerator\object\BigSpruceTree;
 use BlockHorizons\BlockGenerator\object\DarkOakTree;
 use pocketmine\block\BlockLegacyIds;
-use pocketmine\block\utils\TreeType;
+use pocketmine\world\generator\object\TreeType;
 use pocketmine\utils\Random;
 use pocketmine\world\ChunkManager;
 use pocketmine\world\format\Chunk;
