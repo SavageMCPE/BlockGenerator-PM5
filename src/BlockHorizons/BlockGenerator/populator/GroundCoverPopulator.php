@@ -70,7 +70,7 @@ class GroundCoverPopulator implements Populator
 
 	private function getNextStone(Chunk $chunk, int $x, int $y, int $z): int
 	{
-		for (; $y >= 0 && $chunk->getFullBlock($x, $y, $z) !== VanillaBlocks::STONE()->getFullId(); $y--) {
+		for (; $y >= 0 && $chunk->getBlockStateId($x, $y, $z) !== VanillaBlocks::STONE()->getFullId(); $y--) {
 			//
 		}
 		return $y;
@@ -78,7 +78,7 @@ class GroundCoverPopulator implements Populator
 
 	private function getNextAir(Chunk $chunk, int $x, int $y, int $z): int
 	{
-		for (; $y >= 0 && $chunk->getFullBlock($x, $y, $z) !== VanillaBlocks::AIR()->getFullId(); $y--) {
+		for (; $y >= 0 && $chunk->getBlockStateId($x, $y, $z) !== VanillaBlocks::AIR()->getFullId(); $y--) {
 			//
 		}
 		return $y;
