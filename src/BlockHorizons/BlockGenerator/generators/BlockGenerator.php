@@ -130,7 +130,7 @@ class BlockGenerator extends CustomGenerator
 	{
 		$baseX = $chunkX * Chunk::EDGE_LENGTH;
 		$baseZ = $chunkZ * Chunk::EDGE_LENGTH;
-		$this->random->setSeed(intval($chunkX * $this->localSeed1 ^ $chunkZ * $this->localSeed2 ^ $this->seed));
+		$this->random->setSeed((int) intval($chunkX * $this->localSeed1 ^ $chunkZ * $this->localSeed2 ^ $this->seed));
 
 		$chunk = $world->getChunk($chunkX, $chunkZ);
 
@@ -314,7 +314,7 @@ class BlockGenerator extends CustomGenerator
 		for ($x = 0; $x < 16; $x++) {
 			for ($z = 0; $z < 16; $z++) {
 				$biome = $this->getSelector()->pickBiome($baseX | $x, $baseZ | $z);
-				$chunk->setBiomeId($x, $z, $biome->getId());
+				$chunk->setBiomeId($x, 0, $z, $biome->getId());
 			}
 		}
 
