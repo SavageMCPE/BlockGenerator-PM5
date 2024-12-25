@@ -1,8 +1,8 @@
 <?php
 
-namespace box\utils;
+namespace BlockHorizons\BlockGenerator\utils;
 
-use box\Main;
+use BlockHorizons\BlockGenerator\Main;
 use pocketmine\item\Item;
 use pocketmine\item\VanillaItems;
 use pocketmine\item\LegacyStringToItemParser;
