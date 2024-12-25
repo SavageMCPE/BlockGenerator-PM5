@@ -333,7 +333,7 @@ class BlockGenerator extends CustomGenerator
 			$populator->populate($world, $chunkX, $chunkZ, $this->random);
 		}
 
-		$biome = CustomBiome::getBiome($chunk->getBiomeId(7, 7));
+		$biome = CustomBiome::getBiome($chunk->getBiomeId(7, 0, 7));
 
 		if ($this->settings['populate'] === false) return;
 
