@@ -283,17 +283,17 @@ class BlockGenerator extends CustomGenerator
 
 							for ($xIn = 0; $xIn < 4; ++$xIn) {
 								if (($scaleZ2 += $scaleZ) > 0.0) {
-									$chunk->setFullBlock(
+									$chunk->setBlockStateId(
 										x: $xSeg * 4 + $zIn,
 										y: $ySeg * 8 + $yIn,
 										z: $zSeg * 4 + $xIn,
-										block: ($biome instanceof CoveredBiome ? $biome->getStoneBlock() : VanillaBlocks::STONE())->getFullId());
+										block: ($biome instanceof CoveredBiome ? $biome->getStoneBlock() : VanillaBlocks::STONE())->getStateId());
 								} elseif ($ySeg * 8 + $yIn <= $this->seaHeight) {
-									$chunk->setFullBlock(
+									$chunk->setBlockStateId(
 										x: $xSeg * 4 + $zIn,
 										y: $ySeg * 8 + $yIn,
 										z: $zSeg * 4 + $xIn,
-										block: VanillaBlocks::WATER()->getFullId()
+										block: VanillaBlocks::WATER()->getStateId()
 									);
 								}
 							}
