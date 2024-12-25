@@ -130,7 +130,7 @@ class BlockGenerator extends CustomGenerator
 	{
 		$baseX = $chunkX * Chunk::EDGE_LENGTH;
 		$baseZ = $chunkZ * Chunk::EDGE_LENGTH;
-		$this->random->setSeed($chunkX * $this->localSeed1 ^ $chunkZ * $this->localSeed2 ^ $this->seed);
+		$this->random->setSeed(intval($chunkX * $this->localSeed1 ^ $chunkZ * $this->localSeed2 ^ $this->seed));
 
 		$chunk = $world->getChunk($chunkX, $chunkZ);
 
